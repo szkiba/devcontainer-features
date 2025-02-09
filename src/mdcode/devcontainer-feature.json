@@ -1,0 +1,15 @@
+{
+  "name": "Markdown code block authoring tool",
+  "id": "mdcode",
+  "version": "1.0.0",
+  "description": "The `mdcode` command-line tool allows code blocks embedded in a markdown document to be developed in the usual way. During the development of the code blocks, the usual tools and methods can be used. This makes the embedded codes testable, which is especially important for example codes. There is no worse developer experience than a faulty sample code.",
+  "documentationURL": "https://github.com/szkiba/mdcode",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": ["latest"],
+      "default": "latest",
+      "description": "Select the version to install"
+    }
+  }
+}

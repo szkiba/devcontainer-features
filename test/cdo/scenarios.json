@@ -1,9 +1,10 @@
 {
-  "all": {
+  "cdo": {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-      "mdcode": {},
-      "cdo": {}
+      "cdo": {
+        "version": "0.1.0"
+      }
     }
   }
 }
