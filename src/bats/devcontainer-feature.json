@@ -1,0 +1,16 @@
+{
+  "name": "Bash Automated Testing System",
+  "id": "bats",
+  "version": "1.0.0",
+  "description": "Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected.",
+  "documentationURL": "https://github.com/bats-core/bats-core",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": ["latest", "1.11.1"],
+      "default": "latest",
+      "description": "Select the version to install"
+    }
+  },
+  "installsAfter": ["ghcr.io/devcontainers/features/git:1"]
+}

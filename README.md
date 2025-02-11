@@ -1,6 +1,6 @@
 # Dev Container Features
 
-*Dev Container Features for tools created by Iván Szkiba*
+*Dev Container Features by Iván Szkiba*
 
 ## Contents
 
@@ -8,6 +8,7 @@ This repository contains a _collection_ of Dev Container Features:
 
  - [`mdcode`](./src/mdcode) - Markdown code block authoring tool
  - [`cdo`](./src/cdo) - Markdown-based task runner for contributors
+ - [`bats`](./src/bats) - Bash Automated Testing System
 
 ## Repo and Feature Structure
 

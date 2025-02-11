@@ -20,12 +20,15 @@ echo -e "The result of the 'mdcode --version' command will be:\n"
 mdcode --version
 echo -e "The result of the 'cdo --version' command will be:\n"
 cdo --version
+echo -e "The result of the 'bats --version' command will be:\n"
+bats --version
 echo -e "\n"
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
 check "check mdcode version" bash -c "mdcode --version | grep 'mdcode version'"
 check "check cdo version" bash -c "cdo --version | grep 'cdo version'"
+check "check bats version" bash -c "bats --version | grep 'Bats'"
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

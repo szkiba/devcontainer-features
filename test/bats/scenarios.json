@@ -1,10 +1,10 @@
 {
-  "all": {
+  "bats": {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-      "mdcode": {},
-      "cdo": {},
-      "bats": {}
+      "bats": {
+        "version": "1.11.1"
+      }
     }
   }
 }
