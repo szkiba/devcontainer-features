@@ -1,6 +1,22 @@
 {
-  "all": {
+  "ubuntu": {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "mdcode": {},
+      "cdo": {},
+      "bats": {}
+    }
+  },
+  "debian": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "mdcode": {},
+      "cdo": {},
+      "bats": {}
+    }
+  },
+  "alpine": {
+    "image": "mcr.microsoft.com/devcontainers/base:alpine",
     "features": {
       "mdcode": {},
       "cdo": {},

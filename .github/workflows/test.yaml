@@ -15,6 +15,7 @@ jobs:
         features:
           - cdo
           - mdcode
+          - bats
         baseImage:
           - debian:latest
           - ubuntu:latest
