@@ -9,7 +9,7 @@ set -e
 source dev-container-features-test-lib
 
 # Feature-specific tests
-url=$(curl "https://github.com/szkiba/cdo/releases/latest" -s -L -I -o /dev/null -w '%{url_effective}')
+url=$(wget -q -O - --spider -S "https://github.com/szkiba/cdo/releases/latest" 2>&1 | grep Location)
 latest="${url##*v}"
 check "execute command" bash -c "cdo --version | grep 'cdo version $latest'"
 
