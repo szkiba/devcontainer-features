@@ -66,8 +66,9 @@ export TMPDIR="$(mktemp -d)"
 
 wget -qO - https://dl.google.com/go/${GO_VERSION}.${PLATFORM}.tar.gz | tar x -zf - -C $TMPDIR
 
-export GOPATH=$TMPDIR/go
-export PATH=${GOPATH}/bin:$PATH
+unset GOPATH
+export GOROOT=$TMPDIR/go
+export PATH=${GOROOT}/bin:/bin:/usr/bin
 
 GOBIN=/usr/local/bin go install -ldflags="-s -w" golang.org/x/vuln/cmd/govulncheck@v$VERSION
 

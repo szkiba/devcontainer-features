@@ -1,7 +1,7 @@
 {
   "name": "Go vulnerability scanner",
   "id": "govulncheck",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Govulncheck reports known vulnerabilities that affect Go code.",
   "documentationURL": "https://github.com/golang/vuln",
   "options": {
