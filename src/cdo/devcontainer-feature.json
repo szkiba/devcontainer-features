@@ -1,7 +1,7 @@
 {
   "name": "Markdown-based task runner for contributors",
   "id": "cdo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The `cdo` command line tool allows contributors to perform routine tasks conveniently. The markdown code blocks defining the tasks can be specified in the `CONTRIBUTING.md` or `README.md` files by default. Tasks are executed using a portable, embedded `bash`-like shell.",
   "documentationURL": "https://github.com/szkiba/cdo",
   "options": {
