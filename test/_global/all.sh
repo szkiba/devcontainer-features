@@ -16,12 +16,24 @@ set -e
 # Optional: Import test library bundled with the devcontainer CLI
 source dev-container-features-test-lib
 
+if grep -q "debian" /etc/os-release; then
+   GOLANG_SUPPORTED=true
+fi
+
 echo -e "The result of the 'mdcode --version' command will be:\n"
 mdcode --version
 echo -e "The result of the 'cdo --version' command will be:\n"
 cdo --version
 echo -e "The result of the 'bats --version' command will be:\n"
 bats --version
+
+if [ "$GOLANG_SUPPORTED" == true ]; then
+  echo -e "The result of the 'gosec --version' command will be:\n"
+  gosec --version
+  echo -e "The result of the 'govulncheck -version' command will be:\n"
+  govulncheck -version
+fi
+
 echo -e "\n"
 
 # Feature-specific tests
@@ -29,6 +41,11 @@ echo -e "\n"
 check "check mdcode version" bash -c "mdcode --version | grep 'mdcode version'"
 check "check cdo version" bash -c "cdo --version | grep 'cdo version'"
 check "check bats version" bash -c "bats --version | grep 'Bats'"
+
+if [ "$GOLANG_SUPPORTED" == true ]; then
+  check "check gosec version" bash -c "gosec --version | grep 'Version:'"
+  check "check govulncheck version" bash -c "govulncheck --version | grep 'Scanner: govulncheck@'"
+fi
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.

@@ -9,6 +9,8 @@ This repository contains a _collection_ of Dev Container Features:
  - [`mdcode`](./src/mdcode) - Markdown code block authoring tool
  - [`cdo`](./src/cdo) - Markdown-based task runner for contributors
  - [`bats`](./src/bats) - Bash Automated Testing System
+ - [`gosec`](./src/gosec/) - Go security checker
+ - [`govulncheck`](./src/govulncheck/) - Go vulnerability scanner
 
 ## Repo and Feature Structure
 
