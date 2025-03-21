@@ -33,5 +33,41 @@ VERSION="$(get_version)"
 
 echo "Activating feature 'govulncheck' version $VERSION"
 
-GOBIN=/usr/local/bin go install -ldflags="-s -w" golang.org/x/vuln/cmd/govulncheck@v$VERSION
+get_go_platform() {
+    platform=''
+    machine=$(uname -m)
 
+    case "$(uname -s | tr '[:upper:]' '[:lower:]')" in
+    "linux")
+        case "$machine" in
+        "arm64"* | "aarch64"* ) platform='linux-arm64' ;;
+        *"64") platform='linux-amd64' ;;
+        esac
+        ;;
+    "darwin")
+        case "$machine" in
+        "arm64"* | "aarch64"* ) platform='darwin-arm64' ;;
+        *"64") platform='darwin-amd64' ;;
+        esac
+        ;;
+    esac
+
+    echo -n "$platform"
+}
+
+get_go_version() {
+    wget -qO - https://go.dev/VERSION?m=text| head -1
+}
+
+GO_VERSION="$(get_go_version)"
+PLATFORM="$(get_go_platform)"
+
+export TMPDIR="$(mktemp -d)"
+
+wget -qO - https://dl.google.com/go/${GO_VERSION}.${PLATFORM}.tar.gz | tar x -zf - -C $TMPDIR
+
+export GOPATH=$TMPDIR/go
+
+GOBIN=/usr/local/bin ${GOPATH}/bin/go install -ldflags="-s -w" golang.org/x/vuln/cmd/govulncheck@v$VERSION
+
+rm -rf $TMPDIR
