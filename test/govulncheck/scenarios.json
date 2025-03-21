@@ -3,7 +3,7 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
       "govulncheck": {
-        "version": "1.1.4"
+        "version": "1.1.3"
       }
     }
   }
