@@ -4,7 +4,9 @@
     "features": {
       "mdcode": {},
       "cdo": {},
-      "bats": {}
+      "bats": {},
+      "gosec": {},
+      "govulncheck": {}
     }
   },
   "debian": {
@@ -12,7 +14,9 @@
     "features": {
       "mdcode": {},
       "cdo": {},
-      "bats": {}
+      "bats": {},
+      "gosec": {},
+      "govulncheck": {}
     }
   },
   "alpine": {

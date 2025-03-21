@@ -1,0 +1,10 @@
+{
+  "gosec-with-version": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "gosec": {
+        "version": "2.22.2"
+      }
+    }
+  }
+}

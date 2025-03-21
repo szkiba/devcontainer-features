@@ -1,0 +1,16 @@
+{
+  "name": "Go security checker",
+  "id": "gosec",
+  "version": "1.0.0",
+  "description": "Inspects source code for security problems by scanning the Go AST and SSA code representation.",
+  "documentationURL": "https://github.com/securego/gosec",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": ["latest"],
+      "default": "latest",
+      "description": "Select the version to install"
+    }
+  },
+  "dependsOn": { "ghcr.io/devcontainers/features/go:1": {} }
+}
